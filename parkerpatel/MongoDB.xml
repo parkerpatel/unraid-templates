@@ -2,7 +2,7 @@
 <Containers>
   <Name>MongoDB2</Name>
   <Description>
-    [h3]MongoDB[/h3]MongoDB (from "humongous") is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.
+    [h3]MongoDB2[/h3]MongoDB2 (from "humongous") is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB2 eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB2 calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB2 is free and open-source software.
   </Description>
   <Registry>https://hub.docker.com/_/mongo/</Registry>
   <Repository>mongo</Repository>
@@ -21,13 +21,13 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/mongodb/</HostDir>
+      <HostDir>/mnt/user/appdata/MongoDB2/</HostDir>
       <ContainerDir>/data/db</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Version></Version>
-  <Icon>https://raw.githubusercontent.com/jason-bean/template-mongodb/master/mongo.sh-600x600.png</Icon>
+  <Icon>https://raw.githubusercontent.com/jason-bean/template-MongoDB2/master/mongo.sh-600x600.png</Icon>
   <Beta>False</Beta>
   <Category>Network:Other</Category>
   <Date>2017-02-15</Date>

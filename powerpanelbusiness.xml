@@ -19,7 +19,7 @@
   <ReadMe></ReadMe>
   <Registry>https://hub.docker.com/r/nathanvaughn/powerpanel-business/</Registry>
   <GitHub>https://github.com/parkerpatel/powerpanel-business-docker</GitHub>
-  <Repository>parkerpatel/powerpanel-business-docker</Repository>
+  <Repository>nathanvaughn/powerpanel-business-docker</Repository>
   <Project></Project>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>

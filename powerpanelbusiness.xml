@@ -27,7 +27,7 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>80</HostPort>
+        <HostPort>3052</HostPort>
         <ContainerPort>3052</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>

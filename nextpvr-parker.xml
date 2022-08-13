@@ -1,66 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
-  <TemplateURL>https://raw.githubusercontent.com/parker/unraid-templates/master/parker/nextpvr-parker.xml</TemplateURL>
-  <Beta>False</Beta>
-  <Category>Tools:</Category>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>nextpvr-parker</Name>
-  <Description>
-    [b]Description[/b][br]
-    [br][br]
-    [b]Configuration[/b][br]
-    [b]/config[/b] This is where the application will store its configuration files, database and logs etc.[br][br]
-    [b]Documentation[/b][br]
-    https://github.com/parker/documentation[br][br]
-  </Description>
-  <Overview>
-    NextPVR
-  </Overview>
-  <Support></Support>
-  <ReadMe></ReadMe>
-  <Registry>https://https://hub.docker.com/r/nextpvr/nextpvr_amd64/</Registry>
-  <GitHub>https://github.com/parkerpatel/nextpvr-parker</GitHub>
   <Repository>nextpvr/nextpvr_amd64:stable</Repository>
-  <Project></Project>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/r/nextpvr/nextpvr_amd64/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>8866</HostPort>
-        <ContainerPort>8866</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>16891</HostPort>
-        <ContainerPort>16891</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Environment></Environment>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/nextpvr/config</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user</HostDir>
-      <ContainerDir>/recordings</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user</HostDir>
-      <ContainerDir>/buffer </ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Banner></Banner>
-  <WebUI>https://[IP]:[PORT:3052]/</WebUI>
+  <Support></Support>
+  <Project></Project>
+  <Overview>NextPVR</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8866]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/parker/unraid-templates/master/parker/nextpvr-parker.xml</TemplateURL>
   <Icon></Icon>
-  <DonateText></DonateText>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
-  <ExtraParams></ExtraParams>
-</Containers>
+  <Description></Description>
+  <Config Name="HTTP" Target="8866" Default="8866" Mode="tcp" Description="HTTP" Type="Port" Display="always" Required="true" Mask="false">8866</Config>
+  <Config Name="DLPORT" Target="16891" Default="16891" Mode="udp" Description="DLPORT" Type="Port" Display="always" Required="false" Mask="false">16891</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/nextpvr/config" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nextpvr/config</Config>
+  <Config Name="Recordings Path" Target="/recordings" Default="" Mode="rw" Description="Recordings Path" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Buffer Path" Target="/buffer" Default="" Mode="rw" Description="Buffer Path" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="CONTEXT_PATH" Target="CONTEXT_PATH" Default="/" Mode="" Description="CONTEXT_PATH" Type="Variable" Display="always" Required="true" Mask="false">/</Config>
+</Container>

@@ -19,5 +19,4 @@
   <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/nextpvr/config" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nextpvr/config</Config>
   <Config Name="Recordings Path" Target="/recordings" Default="" Mode="rw" Description="Recordings Path" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Buffer Path" Target="/buffer" Default="" Mode="rw" Description="Buffer Path" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="CONTEXT_PATH" Target="CONTEXT_PATH" Default="/" Mode="" Description="CONTEXT_PATH" Type="Variable" Display="always" Required="true" Mask="false">/</Config>
 </Container>
